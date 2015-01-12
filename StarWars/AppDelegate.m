@@ -7,7 +7,8 @@
 //
 
 #import "AppDelegate.h"
-
+#import "VOSStarWarsCharacter.h"
+#import "VOSCharacterViewController.h"
 
 @implementation AppDelegate
 
@@ -18,6 +19,24 @@
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible]; // hacer que esté visible y que tenga el foco, es decir que esté activa.
+    
+    NSURL * vaderURL = [NSURL URLWithString:@"http://es.wikipedia.org/wiki/Darth_Vader"];
+    NSBundle *  bundle = [NSBundle mainBundle];
+    NSURL * soundURL = [bundle URLForResource:@"vader"
+                                withExtension:@"caf"];
+    NSData * vaderSound = [NSData dataWithContentsOfURL:soundURL];
+    UIImage * vaderImage = [UIImage imageNamed:@"darthVader.jpg"];
+    
+    // Creamos el modelo
+    VOSStarWarsCharacter * vader = [VOSStarWarsCharacter starWarsCharacterWithName:@"Anakin Skywalker"
+                                                                             alias:@"Darth Vader"
+                                                                          wikiPage:vaderURL
+                                                                             image:vaderImage
+                                                                         soundData:vaderSound];
+    // creamos el controlador principal
+    VOSCharacterViewController * charVC = [[VOSCharacterViewController alloc] initWithModel:vader];
+    self.window.rootViewController = charVC;
+    
     return YES;
 }
 
