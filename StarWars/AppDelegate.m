@@ -8,18 +8,16 @@
 
 #import "AppDelegate.h"
 
-@interface AppDelegate ()
-
-@end
 
 @implementation AppDelegate
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    // creamos una window que ocupe toda la pantalla. bounds es un CGRect de la pantalla principal ( CG es Core Grphics )
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
-    [self.window makeKeyAndVisible];
+    [self.window makeKeyAndVisible]; // hacer que esté visible y que tenga el foco, es decir que esté activa.
     return YES;
 }
 
