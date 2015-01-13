@@ -36,15 +36,13 @@
                                                                          soundData:vaderSound];
     // creamos los controladores
     VOSCharacterViewController * charVC = [[VOSCharacterViewController alloc] initWithModel:vader];
-    VOSWikiViewController * wikiVC = [[VOSWikiViewController alloc] initWithModel:vader];
     
     // Creamos el combinador
-    UITabBarController * tabVC = [[UITabBarController alloc] init ];
-    [tabVC setViewControllers:@[charVC, wikiVC]];
-    
+    UINavigationController * navVC = [[ UINavigationController alloc] init];
+    [navVC pushViewController:charVC animated:NO];
     
     // Lo asignamos como Root
-    self.window.rootViewController = tabVC;
+    self.window.rootViewController = navVC;
     
     return YES;
 }

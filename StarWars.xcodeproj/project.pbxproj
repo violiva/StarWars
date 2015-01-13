@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		AD191C901A645A8500A78787 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD191C8F1A645A8500A78787 /* AudioToolbox.framework */; };
 		ADB9490C1A63E502004C147B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = ADB9490B1A63E502004C147B /* main.m */; };
 		ADB9490F1A63E502004C147B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = ADB9490E1A63E502004C147B /* AppDelegate.m */; };
 		ADB949111A63E502004C147B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ADB949101A63E502004C147B /* Images.xcassets */; };
@@ -46,7 +45,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		AD191C8F1A645A8500A78787 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		ADB949061A63E502004C147B /* StarWars.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StarWars.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADB9490A1A63E502004C147B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ADB9490B1A63E502004C147B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -88,7 +86,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AD191C901A645A8500A78787 /* AudioToolbox.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -128,7 +125,6 @@
 				ADB949101A63E502004C147B /* Images.xcassets */,
 				ADB949121A63E502004C147B /* LaunchScreen.xib */,
 				ADBD67771A651A8000C150CA /* Sound */,
-				ADBD67761A65174300C150CA /* Framework */,
 				ADB949331A64043D004C147B /* Resources */,
 				ADB949091A63E502004C147B /* Supporting Files */,
 				ADB949321A63F705004C147B /* Controllers */,
@@ -204,14 +200,6 @@
 				ADB949411A640452004C147B /* yoda.jpg */,
 			);
 			name = Resources;
-			sourceTree = "<group>";
-		};
-		ADBD67761A65174300C150CA /* Framework */ = {
-			isa = PBXGroup;
-			children = (
-				AD191C8F1A645A8500A78787 /* AudioToolbox.framework */,
-			);
-			name = Framework;
 			sourceTree = "<group>";
 		};
 		ADBD67771A651A8000C150CA /* Sound */ = {

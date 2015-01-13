@@ -9,6 +9,7 @@
 @import AudioToolbox;
 #import "VOSCharacterViewController.h"
 #import "CafPlayer.h"
+#import "VOSWikiViewController.h"
 
 @interface VOSCharacterViewController ()
 
@@ -52,5 +53,13 @@
 
 }
 
+-(IBAction)displayWikipedia:(id)sender{
+    // crear un wikiVC
+    VOSWikiViewController * wikiVC = [[VOSWikiViewController alloc] initWithModel:self.model];
+    
+    // pushearlo
+    [self.navigationController pushViewController:wikiVC animated:YES];
+    
+}
 
 @end
