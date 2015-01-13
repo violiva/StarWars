@@ -19,6 +19,7 @@
 -(id) initWithModel:(VOSStarWarsCharacter *) model{
     if (self = [super initWithNibName:nil bundle:nil]){
         _model = model;
+        self.title = @"Wikipedia";
     }
     return self;
 }

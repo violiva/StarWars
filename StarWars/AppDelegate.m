@@ -34,11 +34,17 @@
                                                                           wikiPage:vaderURL
                                                                              image:vaderImage
                                                                          soundData:vaderSound];
-    // creamos el controlador principal
-//    VOSCharacterViewController * charVC = [[VOSCharacterViewController alloc] initWithModel:vader];
+    // creamos los controladores
+    VOSCharacterViewController * charVC = [[VOSCharacterViewController alloc] initWithModel:vader];
     VOSWikiViewController * wikiVC = [[VOSWikiViewController alloc] initWithModel:vader];
     
-    self.window.rootViewController = wikiVC;
+    // Creamos el combinador
+    UITabBarController * tabVC = [[UITabBarController alloc] init ];
+    [tabVC setViewControllers:@[charVC, wikiVC]];
+    
+    
+    // Lo asignamos como Root
+    self.window.rootViewController = tabVC;
     
     return YES;
 }
