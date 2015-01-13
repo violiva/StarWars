@@ -6,14 +6,9 @@
 //  Copyright (c) 2015 Vicente Oliva de la Serna. All rights reserved.
 //
 
-@import AudioToolbox;
 #import "VOSCharacterViewController.h"
 #import "CafPlayer.h"
 #import "VOSWikiViewController.h"
-
-@interface VOSCharacterViewController ()
-
-@end
 
 @implementation VOSCharacterViewController
 
@@ -46,8 +41,6 @@
 
 #pragma mark - Actions
 -(IBAction)playSound:(id) sender{
-//    NSLog(@"I am your father");
-//
     self.player = [CafPlayer cafPlayer];
     [self.player playSoundData:self.model.soundData];
 

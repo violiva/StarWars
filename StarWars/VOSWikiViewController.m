@@ -29,8 +29,6 @@
     
     // Asignamos el delegado
     self.browser.delegate = self;
-    // [[self browser] setDelegate:self]; // nomenclatura de los corchetes
-    
     
     // sincronización modelo con la vista
     [self.browser loadRequest:[NSURLRequest requestWithURL:self.model.wikiPage]];
