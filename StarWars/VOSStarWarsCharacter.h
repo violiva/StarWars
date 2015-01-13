@@ -28,7 +28,7 @@
                                   wikiPage:(NSURL *) url
                                      image:(UIImage *) photo
                                  soundData:(NSData *) soundData;
-
+// Instance Methods
 // designated
 -(id) initWithName:(NSString *) name
              alias:(NSString *) alias

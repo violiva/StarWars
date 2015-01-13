@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AD191C901A645A8500A78787 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD191C8F1A645A8500A78787 /* AudioToolbox.framework */; };
 		ADB9490C1A63E502004C147B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = ADB9490B1A63E502004C147B /* main.m */; };
 		ADB9490F1A63E502004C147B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = ADB9490E1A63E502004C147B /* AppDelegate.m */; };
 		ADB949111A63E502004C147B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ADB949101A63E502004C147B /* Images.xcassets */; };
@@ -29,6 +30,7 @@
 		ADB9494D1A640452004C147B /* vader.caf in Resources */ = {isa = PBXBuildFile; fileRef = ADB9493F1A640452004C147B /* vader.caf */; };
 		ADB9494E1A640452004C147B /* yoda.caf in Resources */ = {isa = PBXBuildFile; fileRef = ADB949401A640452004C147B /* yoda.caf */; };
 		ADB9494F1A640452004C147B /* yoda.jpg in Resources */ = {isa = PBXBuildFile; fileRef = ADB949411A640452004C147B /* yoda.jpg */; };
+		ADBD677A1A651A9400C150CA /* CafPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = ADBD67791A651A9400C150CA /* CafPlayer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +44,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AD191C8F1A645A8500A78787 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		ADB949061A63E502004C147B /* StarWars.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StarWars.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADB9490A1A63E502004C147B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ADB9490B1A63E502004C147B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -71,6 +74,8 @@
 		ADB9493F1A640452004C147B /* vader.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = vader.caf; sourceTree = "<group>"; };
 		ADB949401A640452004C147B /* yoda.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = yoda.caf; sourceTree = "<group>"; };
 		ADB949411A640452004C147B /* yoda.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = yoda.jpg; sourceTree = "<group>"; };
+		ADBD67781A651A9400C150CA /* CafPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CafPlayer.h; sourceTree = "<group>"; };
+		ADBD67791A651A9400C150CA /* CafPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CafPlayer.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +83,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD191C901A645A8500A78787 /* AudioToolbox.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,10 +118,12 @@
 		ADB949081A63E502004C147B /* StarWars */ = {
 			isa = PBXGroup;
 			children = (
+				ADBD67771A651A8000C150CA /* Sound */,
 				ADB9490D1A63E502004C147B /* AppDelegate.h */,
 				ADB9490E1A63E502004C147B /* AppDelegate.m */,
 				ADB949101A63E502004C147B /* Images.xcassets */,
 				ADB949121A63E502004C147B /* LaunchScreen.xib */,
+				ADBD67761A65174300C150CA /* Framework */,
 				ADB949331A64043D004C147B /* Resources */,
 				ADB949091A63E502004C147B /* Supporting Files */,
 				ADB949321A63F705004C147B /* Controllers */,
@@ -188,6 +196,23 @@
 				ADB949411A640452004C147B /* yoda.jpg */,
 			);
 			name = Resources;
+			sourceTree = "<group>";
+		};
+		ADBD67761A65174300C150CA /* Framework */ = {
+			isa = PBXGroup;
+			children = (
+				AD191C8F1A645A8500A78787 /* AudioToolbox.framework */,
+			);
+			name = Framework;
+			sourceTree = "<group>";
+		};
+		ADBD67771A651A8000C150CA /* Sound */ = {
+			isa = PBXGroup;
+			children = (
+				ADBD67781A651A9400C150CA /* CafPlayer.h */,
+				ADBD67791A651A9400C150CA /* CafPlayer.m */,
+			);
+			name = Sound;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -306,6 +331,7 @@
 			files = (
 				ADB9492B1A63F08B004C147B /* VOSStarWarsCharacter.m in Sources */,
 				ADB9490F1A63E502004C147B /* AppDelegate.m in Sources */,
+				ADBD677A1A651A9400C150CA /* CafPlayer.m in Sources */,
 				ADB9490C1A63E502004C147B /* main.m in Sources */,
 				ADB949301A63F6FE004C147B /* VOSCharacterViewController.m in Sources */,
 			);
@@ -492,6 +518,7 @@
 				ADB949251A63E502004C147B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		ADB949261A63E502004C147B /* Build configuration list for PBXNativeTarget "StarWarsTests" */ = {
 			isa = XCConfigurationList;
@@ -500,6 +527,7 @@
 				ADB949281A63E502004C147B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

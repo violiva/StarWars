@@ -16,21 +16,21 @@
                                  wikiPage:(NSURL *) url
                                     image:(UIImage *) photo
                                 soundData:(NSData *) soundData{
-    return [[self alloc] initWithName:name
-                                alias:alias
-                             wikiPage:url
-                                image:photo
-                            soundData:soundData ];
+    return [[self alloc] initWithName: name
+                                alias: alias
+                             wikiPage: url
+                                image: photo
+                            soundData: soundData ];
 }
 
 +(instancetype) starWarsCharacterWithAlias:(NSString *) alias
                                   wikiPage:(NSURL *) url
                                      image:(UIImage *) photo
                                  soundData:(NSData *) soundData{
-    return [[self alloc] initWithAlias:alias
-                              wikiPage:url
-                                 image:photo
-                             soundData:soundData];
+    return [[self alloc] initWithAlias: alias
+                              wikiPage: url
+                                 image: photo
+                             soundData: soundData];
 }
 
 #pragma mark - Init
@@ -49,10 +49,15 @@
     return self;
 }
 
+// Inicializador de conveniencia, sin Nombre para los personajes que sólo tienen alias.
 -(id) initWithAlias:(NSString *) alias
            wikiPage:(NSURL *) url
               image:(UIImage *) photo
           soundData:(NSData *) soundData{
-    return [self initWithName:nil alias:alias wikiPage:url image:photo soundData:soundData];
+    return [self initWithName: nil
+                        alias: alias
+                     wikiPage: url
+                        image: photo
+                    soundData: soundData];
 }
 @end

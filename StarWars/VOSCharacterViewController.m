@@ -6,7 +6,9 @@
 //  Copyright (c) 2015 Vicente Oliva de la Serna. All rights reserved.
 //
 
+@import AudioToolbox;
 #import "VOSCharacterViewController.h"
+#import "CafPlayer.h"
 
 @interface VOSCharacterViewController ()
 
@@ -22,7 +24,7 @@
     return self;
 }
 
--(void) viewWillAppear:(BOOL)animated{
+-(void) viewWillAppear:(BOOL) animated{
     [super viewWillAppear:animated];
 
     // sincronizamos el modelo con la vista
@@ -32,6 +34,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+
 }
 
 - (void)didReceiveMemoryWarning {
@@ -41,7 +44,11 @@
 
 #pragma mark - Actions
 -(IBAction)playSound:(id) sender{
-    NSLog(@"I am your father");
+//    NSLog(@"I am your father");
+//
+    self.player = [CafPlayer cafPlayer];
+    [self.player playSoundData:self.model.soundData];
+
 }
 
 

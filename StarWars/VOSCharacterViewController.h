@@ -7,12 +7,15 @@
 //
 
 @import UIKit;
+
 #import "VOSStarWarsCharacter.h"
+#import "CafPlayer.h"
 
 @interface VOSCharacterViewController : UIViewController
 
 @property (strong, nonatomic) VOSStarWarsCharacter * model;
 @property (weak, nonatomic) IBOutlet UIImageView * photoView;
+@property (strong, nonatomic) CafPlayer * player;
 
 -(id) initWithModel: (VOSStarWarsCharacter *) model;
 
