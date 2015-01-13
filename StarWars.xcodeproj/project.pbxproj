@@ -31,6 +31,8 @@
 		ADB9494E1A640452004C147B /* yoda.caf in Resources */ = {isa = PBXBuildFile; fileRef = ADB949401A640452004C147B /* yoda.caf */; };
 		ADB9494F1A640452004C147B /* yoda.jpg in Resources */ = {isa = PBXBuildFile; fileRef = ADB949411A640452004C147B /* yoda.jpg */; };
 		ADBD677A1A651A9400C150CA /* CafPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = ADBD67791A651A9400C150CA /* CafPlayer.m */; };
+		ADBD677E1A6520E100C150CA /* VOSWikiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ADBD677C1A6520E100C150CA /* VOSWikiViewController.m */; };
+		ADBD677F1A6520E100C150CA /* VOSWikiViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ADBD677D1A6520E100C150CA /* VOSWikiViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +78,9 @@
 		ADB949411A640452004C147B /* yoda.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = yoda.jpg; sourceTree = "<group>"; };
 		ADBD67781A651A9400C150CA /* CafPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CafPlayer.h; sourceTree = "<group>"; };
 		ADBD67791A651A9400C150CA /* CafPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CafPlayer.m; sourceTree = "<group>"; };
+		ADBD677B1A6520E100C150CA /* VOSWikiViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VOSWikiViewController.h; sourceTree = "<group>"; };
+		ADBD677C1A6520E100C150CA /* VOSWikiViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VOSWikiViewController.m; sourceTree = "<group>"; };
+		ADBD677D1A6520E100C150CA /* VOSWikiViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VOSWikiViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,11 +123,11 @@
 		ADB949081A63E502004C147B /* StarWars */ = {
 			isa = PBXGroup;
 			children = (
-				ADBD67771A651A8000C150CA /* Sound */,
 				ADB9490D1A63E502004C147B /* AppDelegate.h */,
 				ADB9490E1A63E502004C147B /* AppDelegate.m */,
 				ADB949101A63E502004C147B /* Images.xcassets */,
 				ADB949121A63E502004C147B /* LaunchScreen.xib */,
+				ADBD67771A651A8000C150CA /* Sound */,
 				ADBD67761A65174300C150CA /* Framework */,
 				ADB949331A64043D004C147B /* Resources */,
 				ADB949091A63E502004C147B /* Supporting Files */,
@@ -173,6 +178,9 @@
 				ADB9492D1A63F6FE004C147B /* VOSCharacterViewController.h */,
 				ADB9492E1A63F6FE004C147B /* VOSCharacterViewController.m */,
 				ADB9492F1A63F6FE004C147B /* VOSCharacterViewController.xib */,
+				ADBD677B1A6520E100C150CA /* VOSWikiViewController.h */,
+				ADBD677C1A6520E100C150CA /* VOSWikiViewController.m */,
+				ADBD677D1A6520E100C150CA /* VOSWikiViewController.xib */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -306,6 +314,7 @@
 				ADB9494B1A640452004C147B /* tarkin.caf in Resources */,
 				ADB949471A640452004C147B /* palpatine.caf in Resources */,
 				ADB949481A640452004C147B /* palpatine.jpg in Resources */,
+				ADBD677F1A6520E100C150CA /* VOSWikiViewController.xib in Resources */,
 				ADB9494D1A640452004C147B /* vader.caf in Resources */,
 				ADB949431A640452004C147B /* c3po.caf in Resources */,
 				ADB949491A640452004C147B /* r2-d2.caf in Resources */,
@@ -334,6 +343,7 @@
 				ADBD677A1A651A9400C150CA /* CafPlayer.m in Sources */,
 				ADB9490C1A63E502004C147B /* main.m in Sources */,
 				ADB949301A63F6FE004C147B /* VOSCharacterViewController.m in Sources */,
+				ADBD677E1A6520E100C150CA /* VOSWikiViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "VOSStarWarsCharacter.h"
 #import "VOSCharacterViewController.h"
+#import "VOSWikiViewController.h"
 
 @implementation AppDelegate
 
@@ -20,7 +21,7 @@
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible]; // hacer que esté visible y que tenga el foco, es decir que esté activa.
     
-    NSURL * vaderURL = [NSURL URLWithString:@"http://es.wikipedia.org/wiki/Darth_Vader"];
+    NSURL * vaderURL = [NSURL URLWithString:@"http://en.wikipedia.org/wiki/Darth_Vader"];
     NSBundle *  bundle = [NSBundle mainBundle];
     NSURL * soundURL = [bundle URLForResource:@"vader"
                                 withExtension:@"caf"];
@@ -34,8 +35,10 @@
                                                                              image:vaderImage
                                                                          soundData:vaderSound];
     // creamos el controlador principal
-    VOSCharacterViewController * charVC = [[VOSCharacterViewController alloc] initWithModel:vader];
-    self.window.rootViewController = charVC;
+//    VOSCharacterViewController * charVC = [[VOSCharacterViewController alloc] initWithModel:vader];
+    VOSWikiViewController * wikiVC = [[VOSWikiViewController alloc] initWithModel:vader];
+    
+    self.window.rootViewController = wikiVC;
     
     return YES;
 }
