@@ -17,6 +17,15 @@
                                bundle: nil ]){
         _model = model;
         self.title = model.alias;
+        
+
+        UIImage* anImage1 = [UIImage imageNamed:@"hand61.png"];
+        UIImage* anImage2 = [UIImage imageNamed:@"mobilephone15.png"];
+
+        [self setTabBarItem:[[UITabBarItem alloc] initWithTitle:self.model.alias
+                                                          image: anImage2  // icono sin seleccionar
+                                                  selectedImage:anImage1]];
+
     }
     return self;
 }
