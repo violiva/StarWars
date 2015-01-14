@@ -49,7 +49,6 @@
         NSData * vaderSound = [NSData dataWithContentsOfURL:soundURL];
         UIImage * vaderImage = [UIImage imageNamed:@"darthVader.jpg"];
         
-        // Creamos el modelo
         VOSStarWarsCharacter * vader = [VOSStarWarsCharacter starWarsCharacterWithName:@"Anakin Skywalker"
                                                                                  alias:@"Darth Vader"
                                                                               wikiPage:vaderURL
@@ -62,7 +61,6 @@
         NSData * c3poSound = [NSData dataWithContentsOfURL:c3poSoundURL];
         UIImage * c3poImage = [UIImage imageNamed:@"c3po.jpg"];
         
-        // Creamos el modelo
         VOSStarWarsCharacter * c3po = [VOSStarWarsCharacter starWarsCharacterWithAlias:@"C-3PO"
                                                                               wikiPage:c3poURL
                                                                                  image:c3poImage
@@ -74,7 +72,6 @@
         NSData * r2d2Sound = [NSData dataWithContentsOfURL:r2d2SoundURL];
         UIImage * r2d2Image = [UIImage imageNamed:@"R2-D2.jpg"];
         
-        // Creamos el modelo
         VOSStarWarsCharacter * r2d2 = [VOSStarWarsCharacter starWarsCharacterWithAlias:@"R2-D2"
                                                                               wikiPage:r2d2URL
                                                                                  image:r2d2Image
@@ -86,7 +83,6 @@
         NSData * chewieSound = [NSData dataWithContentsOfURL:chewieSoundURL];
         UIImage * chewieImage = [UIImage imageNamed:@"Chewbacca.jpg"];
         
-        // Creamos el modelo
         VOSStarWarsCharacter * chewbacca = [VOSStarWarsCharacter starWarsCharacterWithAlias:@"Chewbacca"
                                                                                    wikiPage:chewieURL
                                                                                       image:chewieImage
@@ -98,7 +94,6 @@
         NSData * yodaSound = [NSData dataWithContentsOfURL:yodaSoundURL];
         UIImage * yodaImage = [UIImage imageNamed:@"yoda.jpg"];
         
-        // Creamos el modelo
         VOSStarWarsCharacter * yoda = [VOSStarWarsCharacter starWarsCharacterWithName:@"Minch Yoda"
                                                                                 alias:@"Master Yoda"
                                                                              wikiPage:yodaURL
@@ -111,7 +106,6 @@
         NSData * palpatineSound = [NSData dataWithContentsOfURL:palpatineSoundURL];
         UIImage * palpatineImage = [UIImage imageNamed:@"palpatine.jpg"];
         
-        // Creamos el modelo
         VOSStarWarsCharacter * palpatine = [VOSStarWarsCharacter starWarsCharacterWithName:@"Palpatine"
                                                                                      alias:@"Darth Sidious"
                                                                                   wikiPage:palpatineURL
@@ -124,7 +118,6 @@
         NSData * tarkinSound = [NSData dataWithContentsOfURL:tarkinSoundURL];
         UIImage * tarkinImage = [UIImage imageNamed:@"tarkin.jpg"];
         
-        // Creamos el modelo
         VOSStarWarsCharacter * tarkin = [VOSStarWarsCharacter starWarsCharacterWithName:@"Wilhuf Tarkin"
                                                                                   alias:@"Grand Moff Tarkin"
                                                                                wikiPage:tarkinURL

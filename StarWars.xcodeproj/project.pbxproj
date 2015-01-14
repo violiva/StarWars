@@ -34,6 +34,7 @@
 		ADBD677A1A651A9400C150CA /* CafPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = ADBD67791A651A9400C150CA /* CafPlayer.m */; };
 		ADBD677E1A6520E100C150CA /* VOSWikiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ADBD677C1A6520E100C150CA /* VOSWikiViewController.m */; };
 		ADBD677F1A6520E100C150CA /* VOSWikiViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ADBD677D1A6520E100C150CA /* VOSWikiViewController.xib */; };
+		ADCE8A281A66840C008A601C /* VOSStarWarsUniverseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ADCE8A271A66840C008A601C /* VOSStarWarsUniverseViewController.m */; };
 		ADE267B21A6676B5002A929A /* VOSStarWarsUniverse.m in Sources */ = {isa = PBXBuildFile; fileRef = ADE267B11A6676B5002A929A /* VOSStarWarsUniverse.m */; };
 /* End PBXBuildFile section */
 
@@ -84,6 +85,8 @@
 		ADBD677B1A6520E100C150CA /* VOSWikiViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VOSWikiViewController.h; sourceTree = "<group>"; };
 		ADBD677C1A6520E100C150CA /* VOSWikiViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VOSWikiViewController.m; sourceTree = "<group>"; };
 		ADBD677D1A6520E100C150CA /* VOSWikiViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VOSWikiViewController.xib; sourceTree = "<group>"; };
+		ADCE8A261A66840C008A601C /* VOSStarWarsUniverseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VOSStarWarsUniverseViewController.h; sourceTree = "<group>"; };
+		ADCE8A271A66840C008A601C /* VOSStarWarsUniverseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VOSStarWarsUniverseViewController.m; sourceTree = "<group>"; };
 		ADE267B01A6676B5002A929A /* VOSStarWarsUniverse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VOSStarWarsUniverse.h; sourceTree = "<group>"; };
 		ADE267B11A6676B5002A929A /* VOSStarWarsUniverse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VOSStarWarsUniverse.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -186,6 +189,8 @@
 				ADBD677B1A6520E100C150CA /* VOSWikiViewController.h */,
 				ADBD677C1A6520E100C150CA /* VOSWikiViewController.m */,
 				ADBD677D1A6520E100C150CA /* VOSWikiViewController.xib */,
+				ADCE8A261A66840C008A601C /* VOSStarWarsUniverseViewController.h */,
+				ADCE8A271A66840C008A601C /* VOSStarWarsUniverseViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -344,6 +349,7 @@
 				ADBD677A1A651A9400C150CA /* CafPlayer.m in Sources */,
 				ADE267B21A6676B5002A929A /* VOSStarWarsUniverse.m in Sources */,
 				ADB9490C1A63E502004C147B /* main.m in Sources */,
+				ADCE8A281A66840C008A601C /* VOSStarWarsUniverseViewController.m in Sources */,
 				ADB949301A63F6FE004C147B /* VOSCharacterViewController.m in Sources */,
 				ADBD677E1A6520E100C150CA /* VOSWikiViewController.m in Sources */,
 			);
