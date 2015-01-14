@@ -64,4 +64,30 @@
     
 }
 
+#pragma mark - <UISplitViewControllerDelegate>
+-(void) splitViewController:(UISplitViewController *)svc willChangeToDisplayMode:(UISplitViewControllerDisplayMode)displayMode{
+    
+    if (displayMode == UISplitViewControllerDisplayModePrimaryHidden) {
+        
+        // Hay que poner el botón en mi barra de navegación
+        self.navigationItem.rightBarButtonItem = svc.displayModeButtonItem;
+        
+    }else if (displayMode == UISplitViewControllerDisplayModeAllVisible){
+        
+        // Hay que quitar el botón de la barra de navegación
+        self.navigationItem.rightBarButtonItem = nil;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
 @end

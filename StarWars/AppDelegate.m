@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "VOSStarWarsUniverse.h"
 #import "VOSStarWarsUniverseViewController.h"
+#import "VOSCharacterViewController.h"
 
 @implementation AppDelegate
 
@@ -26,13 +27,24 @@
     
     // Create the Controller
     VOSStarWarsUniverseViewController * uVC = [[VOSStarWarsUniverseViewController alloc] initWithModel:model style:UITableViewStylePlain];
+    VOSCharacterViewController * charVC = [[VOSCharacterViewController alloc] initWithModel:[model imperialCharacterAtIndex:0]];
     
-    // Create the combinator
-    UINavigationController * navVC = [[UINavigationController alloc] init];
-    [navVC pushViewController:uVC animated:NO];
+    // Create the combinators
+    UINavigationController *tableNav = [[UINavigationController alloc] init];
+    [tableNav pushViewController:uVC animated:NO];
+    
+    
+    UINavigationController * charNav = [[UINavigationController alloc] init];
+    [charNav pushViewController:charVC animated:NO];
+    
+    UISplitViewController *splitVC = [[UISplitViewController alloc] init];
+    [splitVC setViewControllers:@[tableNav, charNav]];
+    
+    // Asignamos delegados
+    splitVC.delegate = charVC;
     
     // Asigne the Controller like Root
-    self.window.rootViewController = navVC;
+    self.window.rootViewController = splitVC;
 
     // Active the window
     [self.window makeKeyAndVisible]; // hacer que esté visible y que tenga el foco, es decir que esté activa.
