@@ -34,7 +34,7 @@
     [super viewWillAppear:animated];
 
     // sincronizamos el modelo con la vista
-    self.photoView.image = self.model.photo;
+    [self syncWithModel];
 }
 
 - (void)viewDidLoad {
@@ -79,8 +79,19 @@
     }
 }
 
+#pragma mark - VOSStarWarsUniverseViewControllerDelegate
+-(void) starWarsUniverseViewController:(VOSStarWarsUniverseViewController *)uVC didSelectCharacter:(VOSStarWarsCharacter *)character{
+    
+    // me dicen que cambie el modelo
+    self.model = character;
+    [self syncWithModel];
+}
 
-
+#pragma mark - Utils
+-(void) syncWithModel{
+    self.photoView.image = self.model.photo;
+    self.title = self.model.alias;
+}
 
 
 

@@ -159,11 +159,16 @@
         character = [self.model rebelCharacterAtIndex:indexPath.row];
     }
     
-    // Crear un Character VC
-    VOSCharacterViewController * charVC = [[VOSCharacterViewController alloc] initWithModel:character];
+    // Notificar al delegado
+    if ( [self.delegate respondsToSelector:@selector(starWarsUniverseViewController:didSelectCharacter:)]){
+
+        // como entiende el mensaje se lo mando@end
+        [self.delegate starWarsUniverseViewController:self didSelectCharacter:character];
+    }
     
-    // Pushearlo
-    [self.navigationController pushViewController:charVC animated:YES];
+    
+    
+    
 }
 
 

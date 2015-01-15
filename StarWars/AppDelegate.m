@@ -42,6 +42,7 @@
     
     // Asignamos delegados
     splitVC.delegate = charVC;
+    uVC.delegate = charVC;
     
     // Asigne the Controller like Root
     self.window.rootViewController = splitVC;

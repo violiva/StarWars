@@ -7,15 +7,31 @@
 //
 
 // creamos constantes para definir qué sección es la de los rebeldes y cual es la de los imperiales
+
 #define REBEL_SECTION 1
 #define IMPERIAL_SECTION 0
 
 @import UIKit;
 #import "VOSStarWarsUniverse.h"
 
+@class VOSStarWarsUniverseViewController;
+
+@protocol VOSStarWarsUniverseViewControllerDelegate <NSObject>
+
+// <#methods#>
+@optional
+-(void) starWarsUniverseViewController:(VOSStarWarsUniverseViewController *) uVC didSelectCharacter:(VOSStarWarsCharacter *) character;
+
+-(void) starWarsUniverseViewController:(VOSStarWarsUniverseViewController *) uVC willSelectCharacter:(VOSStarWarsCharacter *) character;
+
+@end
+
+
 @interface VOSStarWarsUniverseViewController : UITableViewController
+@property (weak, nonatomic) id<VOSStarWarsUniverseViewControllerDelegate> delegate;
 
 -(id) initWithModel: (VOSStarWarsUniverse *) model
               style:(UITableViewStyle) style;
 
 @end
+

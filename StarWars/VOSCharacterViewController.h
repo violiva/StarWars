@@ -10,8 +10,9 @@
 
 #import "VOSStarWarsCharacter.h"
 #import "CafPlayer.h"
+#import "VOSStarWarsUniverseViewController.h"
 
-@interface VOSCharacterViewController : UIViewController <UISplitViewControllerDelegate>
+@interface VOSCharacterViewController : UIViewController <UISplitViewControllerDelegate, VOSStarWarsUniverseViewControllerDelegate>
 
 @property (strong, nonatomic) VOSStarWarsCharacter * model;
 @property (weak, nonatomic) IBOutlet UIImageView * photoView;
