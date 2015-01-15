@@ -29,7 +29,7 @@
 @end
 
 
-@interface VOSStarWarsUniverseViewController : UITableViewController
+@interface VOSStarWarsUniverseViewController : UITableViewController <VOSStarWarsUniverseViewControllerDelegate>
 @property (weak, nonatomic) id<VOSStarWarsUniverseViewControllerDelegate> delegate;
 
 -(id) initWithModel: (VOSStarWarsUniverse *) model

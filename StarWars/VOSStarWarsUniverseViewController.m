@@ -176,5 +176,15 @@
     [nc postNotification:n];
 }
 
+#pragma mark - VOSStarWarsUniverseViewControllerDelegate
+-(void)starWarsUniverseViewController:(VOSStarWarsUniverseViewController *)uVC didSelectCharacter:(VOSStarWarsCharacter *)character{
+
+    // Crear un characterVC
+    VOSCharacterViewController * charVC = [[VOSCharacterViewController alloc] initWithModel:character];
+    
+    // pushearlo
+    [self.navigationController pushViewController:charVC animated:YES];
+    
+}
 
 @end

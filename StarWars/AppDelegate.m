@@ -21,31 +21,17 @@
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
     
-
-    // Create the model
-    VOSStarWarsUniverse * model = [[VOSStarWarsUniverse alloc] init];
     
-    // Create the Controller
-    VOSStarWarsUniverseViewController * uVC = [[VOSStarWarsUniverseViewController alloc] initWithModel:model style:UITableViewStylePlain];
-    VOSCharacterViewController * charVC = [[VOSCharacterViewController alloc] initWithModel:[model imperialCharacterAtIndex:0]];
-    
-    // Create the combinators
-    UINavigationController *tableNav = [[UINavigationController alloc] init];
-    [tableNav pushViewController:uVC animated:NO];
+    // Compruebo el tipo de pantalla
+    if ([[UIDevice currentDevice] userInterfaceIdiom ] == UIUserInterfaceIdiomPad){
+        // tableta
+        [self configureForPad];
+    }else{ // Teléfono
+        [self configureForPhone];
+    }
     
     
-    UINavigationController * charNav = [[UINavigationController alloc] init];
-    [charNav pushViewController:charVC animated:NO];
     
-    UISplitViewController *splitVC = [[UISplitViewController alloc] init];
-    [splitVC setViewControllers:@[tableNav, charNav]];
-    
-    // Asignamos delegados
-    splitVC.delegate = charVC;
-    uVC.delegate = charVC;
-    
-    // Asigne the Controller like Root
-    self.window.rootViewController = splitVC;
 
     // Active the window
     [self.window makeKeyAndVisible]; // hacer que esté visible y que tenga el foco, es decir que esté activa.
@@ -75,6 +61,60 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
+#pragma mark - Configuration
+-(void)configureForPad{
+
+    // Create the model
+    VOSStarWarsUniverse * model = [[VOSStarWarsUniverse alloc] init];
+
+    // Create the Controller
+    VOSStarWarsUniverseViewController * uVC = [[VOSStarWarsUniverseViewController alloc] initWithModel:model style:UITableViewStylePlain];
+    VOSCharacterViewController * charVC = [[VOSCharacterViewController alloc] initWithModel:[model imperialCharacterAtIndex:0]];
+    
+    // Create the combinators
+    UINavigationController *tableNav = [[UINavigationController alloc] init];
+    [tableNav pushViewController:uVC animated:NO];
+    
+    
+    UINavigationController * charNav = [[UINavigationController alloc] init];
+    [charNav pushViewController:charVC animated:NO];
+    
+    UISplitViewController *splitVC = [[UISplitViewController alloc] init];
+    [splitVC setViewControllers:@[tableNav, charNav]];
+    
+    // Asignamos delegados
+    splitVC.delegate = charVC;
+    uVC.delegate = charVC;
+    
+    // Asigne the Controller like Root
+    self.window.rootViewController = splitVC;
+
+}
+
+-(void)configureForPhone{
+    // Create the model
+    VOSStarWarsUniverse * model = [[VOSStarWarsUniverse alloc] init];
+    
+    // Create the Controller
+    VOSStarWarsUniverseViewController * uVC = [[VOSStarWarsUniverseViewController alloc] initWithModel:model
+                                                                                                 style:UITableViewStylePlain];
+    
+    // Create the combinator
+    UINavigationController * tableNav = [[UINavigationController alloc] init];
+    [tableNav pushViewController:uVC animated:NO];
+    
+    
+    UINavigationController * navVC = [[UINavigationController alloc] init];
+    [navVC pushViewController:uVC animated:NO];
+    
+    // Asignamos delegados
+    uVC.delegate = uVC;
+    
+    // Asigne the Controller like Root
+    self.window.rootViewController = navVC;
+    
+
+}
 
 
 @end
