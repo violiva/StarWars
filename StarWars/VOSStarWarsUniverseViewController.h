@@ -10,6 +10,8 @@
 
 #define REBEL_SECTION 1
 #define IMPERIAL_SECTION 0
+#define CHARACTER_DID_CHANGE_NOTIFICATION_NAME @"CHARACTER"
+#define CHARACTER_KEY @"CHARACTERKEY"
 
 @import UIKit;
 #import "VOSStarWarsUniverse.h"

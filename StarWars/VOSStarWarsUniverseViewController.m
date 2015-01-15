@@ -166,9 +166,14 @@
         [self.delegate starWarsUniverseViewController:self didSelectCharacter:character];
     }
     
+    // enviamos una notificación
+    NSNotificationCenter * nc = [NSNotificationCenter defaultCenter];
     
-    
-    
+    NSDictionary * info = @{CHARACTER_KEY : character};
+    NSNotification * n = [NSNotification notificationWithName:CHARACTER_DID_CHANGE_NOTIFICATION_NAME
+                                                      object:self
+                                                    userInfo:info];
+    [nc postNotification:n];
 }
 
 
