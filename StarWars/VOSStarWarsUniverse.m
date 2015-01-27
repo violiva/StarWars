@@ -78,7 +78,7 @@
                                                                              soundData:r2d2Sound ];
         
         NSURL * chewieURL = [NSURL URLWithString:@"http://en.wikipedia.org/wiki/Chewbacca"];
-        NSURL * chewieSoundURL = [bundle URLForResource:@"Chewbacca"
+        NSURL * chewieSoundURL = [bundle URLForResource:@"chewbacca"
                                           withExtension:@"caf"];
         NSData * chewieSound = [NSData dataWithContentsOfURL:chewieSoundURL];
         UIImage * chewieImage = [UIImage imageNamed:@"Chewbacca.jpg"];
@@ -87,7 +87,7 @@
                                                                                    wikiPage:chewieURL
                                                                                       image:chewieImage
                                                                                   soundData:chewieSound ];
-        
+    
         NSURL * yodaURL = [NSURL URLWithString:@"http://en.wikipedia.org/wiki/Yoda"];
         NSURL * yodaSoundURL = [bundle URLForResource:@"yoda"
                                         withExtension:@"caf"];

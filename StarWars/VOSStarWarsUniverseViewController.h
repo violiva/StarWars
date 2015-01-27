@@ -14,9 +14,11 @@
 #define CHARACTER_KEY @"CHARACTERKEY"
 
 @import UIKit;
-#import "VOSStarWarsUniverse.h"
+// #import "VOSStarWarsUniverse.h"
 
 @class VOSStarWarsUniverseViewController;
+@class VOSStarWarsUniverse;
+@class VOSStarWarsCharacter;
 
 @protocol VOSStarWarsUniverseViewControllerDelegate <NSObject>
 

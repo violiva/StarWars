@@ -67,7 +67,7 @@
     // Create the model
     VOSStarWarsUniverse * model = [[VOSStarWarsUniverse alloc] init];
 
-    // Create the Controller
+    // Create the Controllers
     VOSStarWarsUniverseViewController * uVC = [[VOSStarWarsUniverseViewController alloc] initWithModel:model style:UITableViewStylePlain];
     VOSCharacterViewController * charVC = [[VOSCharacterViewController alloc] initWithModel:[model imperialCharacterAtIndex:0]];
     

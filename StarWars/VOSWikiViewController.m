@@ -24,7 +24,6 @@
     return self;
 }
 
-
 -(void) viewWillAppear:(BOOL)animated{      // aqui ya existe la vista y tiene tamaño correcto
     [super viewWillAppear:animated];
     // Alta en notificaciones
@@ -41,6 +40,8 @@
     [self syncViewWithModel];
     
 }
+
+
 -(void) viewWillDisappear:(BOOL)animated  {
     [super viewWillDisappear:animated];
     
